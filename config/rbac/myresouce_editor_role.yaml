@@ -1,0 +1,24 @@
+# permissions for end users to edit myresouces.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: myresouce-editor-role
+rules:
+- apiGroups:
+  - mangaal.maths.dev.mangaal.tatacommunications
+  resources:
+  - myresouces
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - mangaal.maths.dev.mangaal.tatacommunications
+  resources:
+  - myresouces/status
+  verbs:
+  - get

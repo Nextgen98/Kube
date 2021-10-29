@@ -1,0 +1,34 @@
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - mangaal.maths.dev.mangaal.tatacommunications
+  resources:
+  - myresouces
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - mangaal.maths.dev.mangaal.tatacommunications
+  resources:
+  - myresouces/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - mangaal.maths.dev.mangaal.tatacommunications
+  resources:
+  - myresouces/status
+  verbs:
+  - get
+  - patch
+  - update

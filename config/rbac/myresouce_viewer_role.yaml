@@ -1,0 +1,20 @@
+# permissions for end users to view myresouces.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: myresouce-viewer-role
+rules:
+- apiGroups:
+  - mangaal.maths.dev.mangaal.tatacommunications
+  resources:
+  - myresouces
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - mangaal.maths.dev.mangaal.tatacommunications
+  resources:
+  - myresouces/status
+  verbs:
+  - get

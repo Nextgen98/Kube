@@ -1,0 +1,16 @@
+domain: mangaal.tatacommunications
+layout:
+- go.kubebuilder.io/v3
+projectName: kube
+repo: mangaal.tatacommunications/kube
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: mangaal.tatacommunications
+  group: mangaal.maths.dev
+  kind: Myresouce
+  path: mangaal.tatacommunications/kube/api/v1
+  version: v1
+version: "3"

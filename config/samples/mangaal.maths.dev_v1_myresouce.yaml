@@ -1,0 +1,13 @@
+apiVersion: mangaal.maths.dev.mangaal.tatacommunications/v1
+kind: Myresouce
+metadata:
+  name: myresouce-sample
+spec:
+  # Add fields here
+  firstNum: 1
+  secondNum: 2
+  operation: SUM
+status:
+  state: up
+  message: created
+  lastUpdated: 12345678  
